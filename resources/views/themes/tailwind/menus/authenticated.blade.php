@@ -50,6 +50,7 @@
     </div>
 
 
+
     <div class="flex sm:ml-6 sm:items-center">
 
         @if( auth()->user()->onTrial() )

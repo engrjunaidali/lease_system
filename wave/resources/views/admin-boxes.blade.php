@@ -12,7 +12,7 @@
                     <p style="display:block; color:#dce9fe; text-align:left; line-height:14px; margin:0px;">Deploy to DigitalOcean</p>
                 </div>
                 <a href="{{ url('admin/do') }}" style="cursor:pointer; flex-shrink:0; justify-self:end; margin-left:auto; background:#fff; color:#4801FF; font-weight:500; padding:10px 20px; border-radius:4px;">
-                    Deploy Now
+                    Properties
                 </a>
             </div>
             <img src="{{ Storage::url('/settings/April2021/digital-ocean.png') }}" style="width:130px; z-index:10; height:auto; top:10px; right:140px; opacity:30%; position:absolute;">
@@ -33,6 +33,7 @@
             <img src="{{ Storage::url('/settings/April2021/popcorn-soda-icon.png') }}" style="width:80px; z-index:10; height:auto; bottom:-30px; right:5px; position:absolute;">
         </div>
     </div>
+    
     <div class="col-xs-12 col-md-6 col-lg-4">
         <div class="bg-green-400 panel widget center bgimage" style="border-radius:6px; position:relative; overflow:hidden; background-image: url('{{ Storage::url('/settings/April2021/tails-bg.png') }}'); background-size:cover;">
             <div style="width:100%; height:40px; display:flex; position:relative; z-index:20; justify-content: start; color:#fff;">

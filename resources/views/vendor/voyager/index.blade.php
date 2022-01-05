@@ -3,11 +3,12 @@
 @section('content')
 
 
-
     <div class="page-content">
         @include('voyager::alerts')
 
-        @include('wave::admin-boxes')
+        {{-- @include('wave::admin-boxes') --}}
+
+        @include('dashboard-widgets.admin-boxes')
 
 
         <div class="analytics-container">

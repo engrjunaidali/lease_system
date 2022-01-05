@@ -1,0 +1,8 @@
+.count{
+    cursor:pointer; 
+    flex-shrink:0; 
+    justify-self:end; 
+    margin-left:auto; 
+    background:#fff; 
+    color:#4801FF; font-weight:500; padding:10px 20px; border-radius:4px;
+}

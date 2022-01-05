@@ -10,7 +10,7 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+use App\Property;
 
 // Authentication routes
 Auth::routes();
@@ -18,6 +18,16 @@ Auth::routes();
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
+
+    Route::get('propertiesPDF',function(){
+        $properties = Property::all();
+
+        return view('vendor.voyager.properties.propertiesPDF',['properties'=>$properties]);
+
+        // $pdf = PDF::loadView('vendor.voyager.properties.propertiesPDF', ['properties'=>$properties]);
+        // return $pdf->download('propertiesPDF.pdf');
+    });
+
 });
 
 // Include Wave Routes

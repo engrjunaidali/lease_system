@@ -11,6 +11,8 @@
 |
 */
 use App\Property;
+use Illuminate\Support\Facades\DB;
+use App\Http\Controllers\pdfController;
 
 // Authentication routes
 Auth::routes();
@@ -19,14 +21,8 @@ Auth::routes();
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 
-    Route::get('propertiesPDF',function(){
-        $properties = Property::all();
-
-        return view('vendor.voyager.properties.propertiesPDF',['properties'=>$properties]);
-
-        // $pdf = PDF::loadView('vendor.voyager.properties.propertiesPDF', ['properties'=>$properties]);
-        // return $pdf->download('propertiesPDF.pdf');
-    });
+    Route::get('/propertiesPDF', [pdfController::class, 'index']);
+    Route::get('/propertiesPDF/{query}', [pdfController::class, 'search']);
 
 });
 

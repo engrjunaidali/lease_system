@@ -15,8 +15,11 @@ class pdfController extends Controller
     public function index()
     {
         $properties = DB::table('properties')->get();
-
-        return view('vendor.voyager.properties.propertiesPDF',['properties'=>$properties]);
+        $count = $properties->count();
+        
+        return view('vendor.voyager.properties.propertiesPDF',[
+            'properties'=>$properties,
+            'no_of_properties'=>$count]);
 
         // $pdf = PDF::loadView('vendor.voyager.properties.propertiesPDF', ['properties'=>$properties]);
         // return $pdf->download('propertiesPDF.pdf');
@@ -24,14 +27,15 @@ class pdfController extends Controller
 
     public function search($query)
     {
-        
-            // $query = $_GET['query'];
+        // return $query;
 
-            $properties = DB::table('properties')->get();
-            return view('vendor.voyager.properties.propertiesPDF',['properties'=>$properties]);
+        $properties = DB::table('properties')->where('unit_no',$query)->get();
+        return view('vendor.voyager.properties.propertiesPDF',[
+            'properties'=>$properties
+        ]);
 
-            // $pdf = PDF::loadView('vendor.voyager.properties.propertiesPDF', ['properties'=>$properties]);
-            // return $pdf->download('propertiesPDF.pdf');
+        // $pdf = PDF::loadView('vendor.voyager.properties.propertiesPDF', ['properties'=>$properties]);
+        // return $pdf->download('propertiesPDF.pdf');
         
     }
 

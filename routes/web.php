@@ -21,7 +21,7 @@ Auth::routes();
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 
-    Route::get('/propertiesPDF', [pdfController::class, 'index']);
+    Route::get('propertiesPDF', [pdfController::class, 'index']);
     Route::get('/propertiesPDF/{query}', [pdfController::class, 'search']);
 
 });

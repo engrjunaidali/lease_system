@@ -15,7 +15,8 @@
         @can('delete', app($dataType->model_name))
             @include('voyager::partials.bulk-delete')
         @endcan
-        <a href="#" class="btn btn-primary"><i class="voyager-receipt"></i> PDF</a>
+        <a href="propertiesPDF" class="btn btn-primary"><i class="voyager-receipt"></i> PDF</a>
+        <a href="propertiesPDF/{{120}}" class="btn btn-primary"><i class="voyager-receipt"></i> Selected PDF</a>
         <a href="#" class="btn btn-success"><i class="voyager-receipt"></i> EXCEL</a>
 
 

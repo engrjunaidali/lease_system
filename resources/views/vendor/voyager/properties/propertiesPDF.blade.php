@@ -4,8 +4,16 @@
 <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 
 <div class="container">
-    {{-- <button id="exportButton" class="btn btn-lg btn-danger clearfix"><span class="fa fa-file-pdf-o"></span> Export to PDF</button> --}}
+   
     <h1>Properties</h1>
+    <br>
+    <div>
+        <label for="">No Of Properties : {{$no_of_properties}}</label>
+    </div>
+    <div></div>
+    <br>
+    
+
     <table id="exportTable" class="table table-hover">
         <thead>
             <tr>
@@ -35,10 +43,11 @@
                 <td>{{$item->bedrooms;}}</td>
                 <td>{{$item->stories;}}</td>
             </tr>
+            
 
             
             @endforeach
-
+            
             
         </tbody>
     </table>
